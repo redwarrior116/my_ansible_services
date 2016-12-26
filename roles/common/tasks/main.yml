@@ -1,0 +1,23 @@
+---
+#create a basic template for a ansible playbook
+
+        -name: set up new ansible directory
+         file: path=/home/yuansu/my_ansible_file
+         state: directory
+         mode: 755
+
+        -name: set up group_vars directory in my_ansible_file
+         file: path=/home/yuansu/my_ansible_file/group_vars
+         state: directory
+         mode: 755
+
+        -name: set up role directory in my_ansible_file
+         file: path=/home/yuansu/my_ansible_file/roles
+         state: directory
+         mode: 755
+
+        -name: set up a main playbook platform in my_ansible_file
+         file: path=/home/yuansu/my_ansible_file
+         state: file
+         mode: 755
+

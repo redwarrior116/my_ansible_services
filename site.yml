@@ -1,9 +1,11 @@
 ---
+# syntax problem appears. "-" need to have space between the attribute
 
-        -host: test_group
-         remote_user: root
-         become: yes
-         become_method: sudo
-
-         roles:
-                -common
+- name: configure a common configuration for all node
+  hosts: all
+# make sure root are accessible during ssh. add its public/private key by using 
+# ssh-copy-id root@<ip_address>
+  remote_user: root
+ 
+  roles:
+        - common

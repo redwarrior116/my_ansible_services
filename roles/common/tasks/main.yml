@@ -1,27 +1,26 @@
 ---
--name: install the latest version of the apache
- yum:
+- name: install the latest version of the apache
+  yum:
        name: httpd
        state: latest
 
--name: install the latest version of net-tools for ifconfig command
- yum:
+- name: install the latest version of net-tools for ifconfig command
+  yum:
        name: net-tools 
        state: latest
 
--name: install the latest version of python 
- yum: 
+- name: install the latest version of python 
+  yum: 
        name: python
        state: latest
 
--name: install the latest version of vim
- yum:
+- name: install the latest version of vim
+  yum:
        name: vim
        state: latest
 
--name: install the latest version of wget
- yum:
+- name: install the latest version of wget
+  yum:
        name: wget
        state: latest
-
--name: 
+ 

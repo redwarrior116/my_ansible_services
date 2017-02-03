@@ -1,0 +1,24 @@
+---
+- name: install the latest version of git
+  yum:
+        name: git
+        state: latest
+
+- name: create a new directory under the home directory
+  file: 
+        path: /home/yuansu/git_repo
+        state: directory
+        mode: 0755
+
+- name: create a new repository in the repo above
+  command: git init --bare --shared /home/yuansu/git_repo 
+
+- name: set up git user
+  shell: git config --global username "{{git_username}}"
+
+- name: set up git user email
+  shell: git config --global user.email {{git_useremail}}
+
+- name: set up git's core editor
+  shell: git config --global core.editor {{core_editor}}        
+

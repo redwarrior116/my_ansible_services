@@ -1,23 +1,27 @@
 ---
-#create a basic template for a ansible playbook
+-name: install the latest version of the apache
+ yum:
+       name: httpd
+       state: latest
 
-        -name: set up new ansible directory
-         file: path=/home/yuansu/my_ansible_file
-         state: directory
-         mode: 755
+-name: install the latest version of net-tools for ifconfig command
+ yum:
+       name: net-tools 
+       state: latest
 
-        -name: set up group_vars directory in my_ansible_file
-         file: path=/home/yuansu/my_ansible_file/group_vars
-         state: directory
-         mode: 755
+-name: install the latest version of python 
+ yum: 
+       name: python
+       state: latest
 
-        -name: set up role directory in my_ansible_file
-         file: path=/home/yuansu/my_ansible_file/roles
-         state: directory
-         mode: 755
+-name: install the latest version of vim
+ yum:
+       name: vim
+       state: latest
 
-        -name: set up a main playbook platform in my_ansible_file
-         file: path=/home/yuansu/my_ansible_file
-         state: file
-         mode: 755
+-name: install the latest version of wget
+ yum:
+       name: wget
+       state: latest
 
+-name: 

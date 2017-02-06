@@ -9,3 +9,8 @@
  
   roles:
         - common
+
+- name: configure git configuration on git server
+  hosts: git_server
+  roles:
+        - git

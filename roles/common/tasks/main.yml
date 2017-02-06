@@ -24,6 +24,4 @@
        name: wget
        state: latest
 
-- name: install and configure git on all server
-  include: git_config.yml
-  tags: git 
+ 

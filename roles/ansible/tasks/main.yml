@@ -1,0 +1,15 @@
+---
+- name: download EPEL version 7.0
+  get_url: 
+  url: http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+  dest: /tmp
+
+- name: install EPEL
+  command: rpm -ivh /tmp/epel-release-latest-7.noarch.rpm
+
+- name: install ansilble
+  yum: ansible
+  state: latest
+
+
+

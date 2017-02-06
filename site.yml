@@ -12,5 +12,13 @@
 
 - name: configure git configuration on git server
   hosts: git_server
+  remote_user: root
   roles:
         - git
+  tags: git_setup
+
+- name: configure ansible on the server 
+  hosts: ansible_server
+  remote_user: root
+  roles: 
+        - ansible

@@ -1,15 +1,17 @@
 ---
-- name: download EPEL version 7.0
+#fixing lot of indenting problems here. between module and its options
+- name: download EPEL 
   get_url: 
-  url: http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-  dest: /tmp
+         url: http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+         dest: /tmp
 
 - name: install EPEL
   command: rpm -ivh /tmp/epel-release-latest-7.noarch.rpm
 
 - name: install ansilble
-  yum: ansible
-  state: latest
+  yum: 
+         name: ansible
+         state: latest
 
 
 

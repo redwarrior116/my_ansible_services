@@ -12,7 +12,7 @@
 
 - name: create a new repository in the repo above
   command: git init --bare --shared /home/yuansu/git_repo 
-
+# if we are using varible like this {{variable}} after a colon. need to quote it with "" like this "{{variable}}"
 - name: set up git user
   shell: git config --global user.name {{git_username}}
 
